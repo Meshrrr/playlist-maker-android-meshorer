@@ -1,5 +1,6 @@
 package com.practicum.playlist_maker_android_meshorer
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -30,6 +31,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
@@ -50,6 +52,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Main_screen() {
+    val context = LocalContext.current
     Box(modifier = Modifier.fillMaxSize().background(Color(55, 114, 231)))
     {
         Text(modifier = Modifier
@@ -76,9 +79,11 @@ fun Main_screen() {
                 .padding( top = 8.dp))
             {
                 ButtonFields(button_description = stringResource(R.string.search_info),
-                    painter = painterResource(id = R.drawable.loop_icon),)
+                    painter = painterResource(id = R.drawable.loop_icon),
+                    )
                 {
-
+                    val searchIntent = Intent(context, SearchActivity::class.java)
+                    context.startActivity(searchIntent)
                 }
 
                 ButtonFields(button_description = stringResource(R.string.playlist_info),

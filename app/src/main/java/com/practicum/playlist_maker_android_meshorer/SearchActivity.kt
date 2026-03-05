@@ -1,5 +1,6 @@
 package com.practicum.playlist_maker_android_meshorer
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.widget.Button
@@ -30,6 +31,7 @@ import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
@@ -46,6 +48,7 @@ class SearchActivity: ComponentActivity() {
 
 @Composable
 fun SearchScreen() {
+    val context = LocalContext.current
     Box(modifier = Modifier
         .fillMaxSize()
         .background(Color.White))
@@ -54,7 +57,10 @@ fun SearchScreen() {
             verticalAlignment = Alignment.CenterVertically,
             content = {
                 Button(
-                    onClick = {},
+                    onClick = {
+                        val homeIntent = Intent(context, MainActivity::class.java)
+                        context.startActivity(homeIntent)
+                    },
                     contentPadding = PaddingValues(0.dp),
                     modifier = Modifier.padding(start = 4.dp).size(48.dp),
                     colors = ButtonDefaults.buttonColors(Color.White),
