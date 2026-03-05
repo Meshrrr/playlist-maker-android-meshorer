@@ -6,4 +6,11 @@
     <string name="featured_info">Избранное</string>
     <string name="settings_info">Настройки</string>
     <string name="searching">Поиск</string>
+    <string name="settings">Настройки</string>
+    <string name="black_theme">Темная тема</string>
+    <string name="control_button">Ползунок</string>
+    <string name="share_app">Поделиться приложением</string>
+
+
+
 </resources>
