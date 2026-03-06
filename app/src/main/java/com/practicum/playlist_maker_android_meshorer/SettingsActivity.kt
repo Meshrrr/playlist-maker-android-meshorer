@@ -34,9 +34,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 class SettingsActivity:  ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
-        setContent {  }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent { SettingsScreen() }
     }
 }
 
@@ -101,6 +101,40 @@ fun SettingsScreen() {
                 Image(modifier = Modifier.padding(end = 12.dp).size(24.dp),
                     painter = painterResource(id = R.drawable.share_icon),
                     contentDescription = "Поделиться")
+
+            }
+        )
+
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(top = 202.dp).height(61.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            content = {
+                Text(modifier = Modifier.padding(start = 16.dp).weight(1f),
+                    text = stringResource(id = R.string.support),
+                    fontSize = 16.sp,
+                    fontFamily = FontFamily.SansSerif,
+                    style = MaterialTheme.typography.bodyMedium)
+
+                Image(modifier = Modifier.padding(end = 12.dp).size(24.dp),
+                    painter = painterResource(id = R.drawable.support),
+                    contentDescription = (R.string.support.toString()))
+
+            }
+        )
+
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(top = 263.dp).height(61.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            content = {
+                Text(modifier = Modifier.padding(start = 16.dp).weight(1f),
+                    text = stringResource(id = R.string.agreement),
+                    fontSize = 16.sp,
+                    fontFamily = FontFamily.SansSerif,
+                    style = MaterialTheme.typography.bodyMedium)
+
+                Image(modifier = Modifier.padding(end = 20.dp).width(8.dp).height(14.dp),
+                    painter = painterResource(id = R.drawable.arrow_button),
+                    contentDescription = (R.string.support.toString()))
 
             }
         )
