@@ -7,6 +7,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.interaction.InteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -101,7 +102,8 @@ fun Main_screen() {
                 ButtonFields(button_description = stringResource(R.string.settings_info),
                     painter = painterResource(id = R.drawable.settings_icon))
                 {
-
+                    val settingsIntent = Intent(context, SettingsActivity::class.java)
+                    context.startActivity(settingsIntent)
                 }
             }
         }
@@ -114,6 +116,7 @@ private fun ButtonFields(button_description: String, painter: Painter, onClick: 
         modifier = Modifier
             .fillMaxWidth()
             .height(66.dp),
+
         colors = ButtonDefaults.buttonColors(Color.White),
         onClick = onClick,
         content = {
