@@ -40,8 +40,8 @@ import androidx.compose.ui.unit.sp
 import java.nio.file.WatchEvent
 
 class SearchActivity: ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         setContent { SearchScreen() }
     }
 }
