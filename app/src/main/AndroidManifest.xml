@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SearchActivity"/>
-        <activity android:name=".`SettingsActivity.kt`"/>
+        <activity android:name=".SettingsActivity"/>
     </application>
 
 </manifest>
