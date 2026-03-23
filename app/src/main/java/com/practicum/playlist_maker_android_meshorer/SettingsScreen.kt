@@ -35,15 +35,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.net.toUri
 
-class SettingsActivity:  ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent { SettingsScreen() }
-    }
-}
-
 @Composable
-fun SettingsScreen() {
+fun SettingsScreen(
+    navigateBack: () -> Unit
+) {
     val context = LocalContext.current
     Box(
         modifier = Modifier.fillMaxSize().background(color = Color.White)
@@ -55,8 +50,7 @@ fun SettingsScreen() {
 
                 Button(
                     onClick = {
-                        val homeIntent = Intent(context, MainActivity::class.java)
-                        context.startActivity(homeIntent)
+                        navigateBack()
                     },
                     contentPadding = PaddingValues(0.dp),
                     modifier = Modifier.padding(start = 4.dp).size(48.dp),
@@ -167,5 +161,5 @@ private fun ButtonSample(button_description: String,
 @Preview()
 @Composable
 private fun SettingsScreenPreview() {
-    SettingsScreen()
+    SettingsScreen(navigateBack = {})
 }

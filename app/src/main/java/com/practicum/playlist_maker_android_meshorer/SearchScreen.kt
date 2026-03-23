@@ -7,7 +7,6 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -41,15 +40,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.sp
 
-class SearchActivity: ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent { SearchScreen() }
-    }
-}
 
 @Composable
-fun SearchScreen() {
+fun SearchScreen(
+    navigateBack: () -> Unit
+) {
     val context = LocalContext.current
     Box(modifier = Modifier
         .fillMaxSize()
@@ -60,8 +55,7 @@ fun SearchScreen() {
             content = {
                 Button(
                     onClick = {
-                        val homeIntent = Intent(context, MainActivity::class.java)
-                        context.startActivity(homeIntent)
+                        navigateBack()
                     },
                     contentPadding = PaddingValues(0.dp),
                     modifier = Modifier.padding(start = 4.dp).size(48.dp),
@@ -117,28 +111,12 @@ fun SearchScreen() {
 
             }
         )
-
-
-//        Button(onClick = {},
-//            shape = RoundedCornerShape(8.dp),
-//            modifier = Modifier.padding(vertical = 128.dp, horizontal = 16.dp).fillMaxWidth(),
-//            colors = ButtonDefaults.buttonColors(Color.LightGray),
-//            content = {
-//                Image(modifier = Modifier.size(16.dp),
-//                    painter = painterResource(id = R.drawable.grey_loop),
-//                    contentDescription = null)
-//
-//                Text(modifier = Modifier.weight(1f).padding(start = 8.dp),
-//                    color = Color.Gray,
-//                    text = stringResource(id = R.string.searching))
-//            })
-
     }
 }
 
 @Preview
 @Composable
 private fun SearchPreview() {
-    SearchScreen()
+    SearchScreen(navigateBack = {})
 }
 
