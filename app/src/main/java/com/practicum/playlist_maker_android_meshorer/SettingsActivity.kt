@@ -112,6 +112,8 @@ fun SettingsScreen() {
                     "Сообщение разработчикам и разработчицам приложения Playlist Maker")
                 supportSendIntent.putExtra(Intent.EXTRA_TEXT,
                     "Спасибо разработчикам и разработчицам за крутое приложение!")
+                supportSendIntent.setType("text/plain")
+                context.startActivity(supportSendIntent)
 
 
             }
