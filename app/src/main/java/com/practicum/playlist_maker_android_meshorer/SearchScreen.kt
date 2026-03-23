@@ -2,13 +2,11 @@ package com.practicum.playlist_maker_android_meshorer
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -17,37 +15,36 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Clear
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.sp
-import java.nio.file.WatchEvent
 
-class SearchActivity: ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent { SearchScreen() }
-    }
-}
 
 @Composable
-fun SearchScreen() {
+fun SearchScreen(
+    navigateBack: () -> Unit
+) {
     val context = LocalContext.current
     Box(modifier = Modifier
         .fillMaxSize()
@@ -58,8 +55,7 @@ fun SearchScreen() {
             content = {
                 Button(
                     onClick = {
-                        val homeIntent = Intent(context, MainActivity::class.java)
-                        context.startActivity(homeIntent)
+                        navigateBack()
                     },
                     contentPadding = PaddingValues(0.dp),
                     modifier = Modifier.padding(start = 4.dp).size(48.dp),
@@ -81,25 +77,46 @@ fun SearchScreen() {
             }
         )
 
-        Button(onClick = {},
-            shape = RoundedCornerShape(8.dp),
+        var textField by remember { mutableStateOf("") }
+
+        OutlinedTextField(
+            value = textField,
+            onValueChange = { textField = it },
             modifier = Modifier.padding(vertical = 64.dp, horizontal = 16.dp).fillMaxWidth(),
-            colors = ButtonDefaults.buttonColors(Color.LightGray),
-            content = {
-                Image(modifier = Modifier.size(16.dp),
-                    painter = painterResource(id = R.drawable.grey_loop),
-                    contentDescription = null,)
+            shape = RoundedCornerShape(8.dp),
+            singleLine = true,
+            placeholder = {
+                Row(modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically,
+                    content = {
+                        Image(modifier = Modifier.size(16.dp),
+                            painter = painterResource(id = R.drawable.grey_loop),
+                            contentDescription = null,)
+                        Text(
+                            text = stringResource(id = R.string.searching),
+                            fontSize = 16.sp,
+                            modifier = Modifier.padding(start = 8.dp),
+                            color = Color.Gray)
+                        }
+                )
+                    },
+            trailingIcon = {
+                Icon(imageVector = Icons.Default.Clear,
+                    modifier = Modifier.size(16.dp).clickable {
+                        textField = ""
+                    },
+                    contentDescription = null,
 
-                Text(modifier = Modifier.weight(1f).padding(start = 8.dp),
-                    color = Color.Gray,
-                    text = stringResource(id = R.string.searching))
-            })
+                    )
 
+            }
+        )
     }
 }
 
 @Preview
 @Composable
 private fun SearchPreview() {
-    SearchScreen()
+    SearchScreen(navigateBack = {})
 }
+
