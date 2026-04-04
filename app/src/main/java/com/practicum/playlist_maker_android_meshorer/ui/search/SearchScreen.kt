@@ -1,9 +1,5 @@
-package com.practicum.playlist_maker_android_meshorer
+package com.practicum.playlist_maker_android_meshorer.ui.search
 
-import android.content.Intent
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -39,6 +35,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.sp
+import com.practicum.playlist_maker_android_meshorer.R
 
 
 @Composable

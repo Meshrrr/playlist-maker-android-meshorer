@@ -3,9 +3,10 @@ package com.practicum.playlist_maker_android_meshorer
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.rememberNavController
-import androidx.navigation.NavHost
 import androidx.navigation.compose.composable
+import com.practicum.playlist_maker_android_meshorer.ui.main.Main_screen
+import com.practicum.playlist_maker_android_meshorer.ui.search.SearchScreen
+import com.practicum.playlist_maker_android_meshorer.ui.settings.SettingsScreen
 
 
 enum class Screen(val route: String) {
@@ -22,20 +23,20 @@ fun PlaylistHost(navController: NavHostController) {
         ) {
         composable(route = Screen.MAIN_MENU.route) {
             Main_screen(
-                navigateToSearch = {navController.navigate(Screen.SEARCH.route)},
-                navigateToSettings = {navController.navigate(Screen.SETTINGS.route)}
+                navigateToSearch = { navController.navigate(Screen.SEARCH.route) },
+                navigateToSettings = { navController.navigate(Screen.SETTINGS.route) }
             )
         }
 
         composable(route = Screen.SEARCH.route) {
             SearchScreen(
-                navigateBack = {navController.navigate(Screen.MAIN_MENU.route)}
+                navigateBack = { navController.navigate(Screen.MAIN_MENU.route) }
             )
         }
 
         composable(route = Screen.SETTINGS.route) {
             SettingsScreen(
-                navigateBack = {navController.navigate(Screen.MAIN_MENU.route)}
+                navigateBack = { navController.navigate(Screen.MAIN_MENU.route) }
             )
         }
 
