@@ -1,4 +1,4 @@
-package com.practicum.playlist_maker_android_meshorer
+package com.practicum.playlist_maker_android_meshorer.ui
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController

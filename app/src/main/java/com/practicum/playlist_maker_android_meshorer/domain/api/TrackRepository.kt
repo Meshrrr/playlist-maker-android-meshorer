@@ -1,7 +1,7 @@
 package com.practicum.playlist_maker_android_meshorer.domain.api
 
-import com.practicum.playlist_maker_android_meshorer.data.dto.Track
+import com.practicum.playlist_maker_android_meshorer.data.network.Track
 
 interface TracksRepository {
-    fun searchTracks(expression: String): List<Track>
+    suspend fun searchTracks(expression: String): List<Track>
 }
