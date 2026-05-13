@@ -24,6 +24,7 @@ int string app_name 0x0
 int string black_theme 0x0
 int string control_button 0x0
 int string featured_info 0x0
+int string mail 0x0
 int string main_name 0x0
 int string playlist_info 0x0
 int string search_info 0x0
@@ -32,6 +33,7 @@ int string settings 0x0
 int string settings_info 0x0
 int string share_app 0x0
 int string support 0x0
+int string url_agreement 0x0
 int style Theme_Playlistmakerandroidmeshorer 0x0
 int xml backup_rules 0x0
 int xml data_extraction_rules 0x0

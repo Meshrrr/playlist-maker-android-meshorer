@@ -1,106 +1,106 @@
 [
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/drawable_arrow_button.png.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/drawable/arrow_button.png"
     },
     {
-        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-33:/drawable_support.png.flat",
-        "source": "com.practicum.playlist_maker_android_meshorer.app-main-35:/drawable/support.png"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/xml_backup_rules.xml.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/xml/backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/drawable_control_theme.png.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/drawable/control_theme.png"
     },
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-33:/drawable_grey_loop.png.flat",
-        "source": "com.practicum.playlist_maker_android_meshorer.app-main-35:/drawable/grey_loop.png"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\drawable_like_icon.png.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\drawable\\like_icon.png"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/drawable_grey_loop.png.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/drawable/grey_loop.png"
     },
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\drawable_playlist_icon.png.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\drawable\\playlist_icon.png"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/xml_data_extraction_rules.xml.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\xml\\data_extraction_rules.xml"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\mipmap-anydpi_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\mipmap-anydpi\\ic_launcher_round.xml"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\drawable_settings_icon.png.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\drawable\\settings_icon.png"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\drawable_arrow_button.png.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\drawable\\arrow_button.png"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/drawable_support.png.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/drawable/support.png"
     },
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\mipmap-anydpi_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\mipmap-anydpi\\ic_launcher.xml"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/drawable_loop_icon.png.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/drawable/loop_icon.png"
     },
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\drawable_arrow_back.png.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\drawable\\arrow_back.png"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/drawable_share_icon.png.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/drawable/share_icon.png"
     },
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/drawable_like_icon.png.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/drawable/like_icon.png"
     },
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/mipmap-anydpi/ic_launcher_round.xml"
     },
     {
-        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-33:/drawable_share_icon.png.flat",
-        "source": "com.practicum.playlist_maker_android_meshorer.app-main-35:/drawable/share_icon.png"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\drawable_loop_icon.png.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\drawable\\loop_icon.png"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/drawable_arrow_back.png.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/drawable/arrow_back.png"
     },
     {
-        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-33:/drawable_control_theme.png.flat",
-        "source": "com.practicum.playlist_maker_android_meshorer.app-main-35:/drawable/control_theme.png"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/drawable_settings_icon.png.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/drawable/settings_icon.png"
     },
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\drawable\\ic_launcher_background.xml"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/drawable_playlist_icon.png.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/drawable/playlist_icon.png"
     },
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\drawable_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\drawable\\ic_launcher_foreground.xml"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/mipmap-anydpi/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-debug-33:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\Meshrr\\.gradle\\daemon\\9.2.1\\com.practicum.playlist_maker_android_meshorer.app-main-35:\\xml\\backup_rules.xml"
+        "merged": "com.practicum.playlist_maker_android_meshorer.app-debug-39:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.practicum.playlist_maker_android_meshorer.app-main-41:/mipmap-hdpi/ic_launcher_round.webp"
     }
 ]

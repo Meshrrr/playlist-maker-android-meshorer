@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.practicum.playlist_maker_android_meshorer.app-mergeDebugResources-31:/values-v30/values-v30.xml",
+            "outputFile": "com.practicum.playlist_maker_android_meshorer.app-mergeDebugResources-37:/values-v30/values-v30.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Meshrr\\.gradle\\caches\\9.2.1\\transforms\\7ff641f8f292603c9e7e766394091837\\workspace\\transformed\\material3-release\\res\\values-v30\\values-v30.xml",
+                    "source": "C:\\Users\\Meshrr\\.gradle\\caches\\9.2.1\\transforms\\a549dd115d70cfbafaad5eaf6f9ac789\\workspace\\transformed\\material3-release\\res\\values-v30\\values-v30.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
