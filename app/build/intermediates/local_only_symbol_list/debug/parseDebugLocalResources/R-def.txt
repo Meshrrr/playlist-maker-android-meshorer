@@ -26,6 +26,7 @@ string app_name
 string black_theme
 string control_button
 string featured_info
+string mail
 string main_name
 string playlist_info
 string search_info
@@ -34,6 +35,7 @@ string settings
 string settings_info
 string share_app
 string support
+string url_agreement
 style Theme.Playlistmakerandroidmeshorer
 xml backup_rules
 xml data_extraction_rules

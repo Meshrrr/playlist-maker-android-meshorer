@@ -12,6 +12,7 @@
     <string name="black_theme">Темная тема</string>
     <string name="control_button">Ползунок</string>
     <string name="featured_info">Избранное</string>
+    <string name="mail">volframhome@gmail.com</string>
     <string name="main_name">Playlist maker</string>
     <string name="playlist_info">Плейлисты</string>
     <string name="search_info">Поиск</string>
@@ -20,5 +21,6 @@
     <string name="settings_info">Настройки</string>
     <string name="share_app">Поделиться приложением</string>
     <string name="support">Написать в поддержку</string>
+    <string name="url_agreement">https://yandex.ru/legal/practicum_offer/ru/</string>
     <style name="Theme.Playlistmakerandroidmeshorer" parent="android:Theme.Material.Light.NoActionBar"/>
 </resources>

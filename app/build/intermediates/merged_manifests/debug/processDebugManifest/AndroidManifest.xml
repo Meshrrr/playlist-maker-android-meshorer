@@ -28,7 +28,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.Playlistmakerandroidmeshorer" >
         <activity
-            android:name="com.practicum.playlist_maker_android_meshorer.MainActivity"
+            android:name="com.practicum.playlist_maker_android_meshorer.ui.activity.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Playlistmakerandroidmeshorer" >
@@ -38,15 +38,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.practicum.playlist_maker_android_meshorer.SearchActivity" />
-        <activity android:name="com.practicum.playlist_maker_android_meshorer.SettingsActivity" />
-        <activity
-            android:name="androidx.compose.ui.tooling.PreviewActivity"
-            android:exported="true" />
+        <activity android:name="ui.search.SearchScreen" />
+        <activity android:name="ui.settings.SettingsScreen" />
         <activity
             android:name="androidx.activity.ComponentActivity"
             android:exported="true"
             android:theme="@android:style/Theme.Material.Light.NoActionBar" />
+        <activity
+            android:name="androidx.compose.ui.tooling.PreviewActivity"
+            android:exported="true" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
