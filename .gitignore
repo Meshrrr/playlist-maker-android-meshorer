@@ -10,6 +10,10 @@
 .DS_Store
 /build
 /build/
+/build/intermediates/
+/build/kotlin/
+/build/outputs/
+
 /captures
 .externalNativeBuild
 .cxx
