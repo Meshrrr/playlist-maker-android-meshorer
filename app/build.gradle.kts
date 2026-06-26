@@ -40,6 +40,7 @@ android {
 }
 
 dependencies {
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.11.0")
     implementation("io.coil-kt:coil-compose:2.5.0")
     implementation(libs.androidx.core.ktx)
     implementation("androidx.core:core-ktx:1.16.0")
@@ -59,4 +60,5 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+
 }

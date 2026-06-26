@@ -13,6 +13,16 @@
           </set>
         </option>
       </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="testRunner" value="CHOOSE_PER_TEST" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../createfragment" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../createfragment" />
+            <option value="$PROJECT_DIR$/../createfragment/app" />
+          </set>
+        </option>
+      </GradleProjectSettings>
     </option>
   </component>
 </project>

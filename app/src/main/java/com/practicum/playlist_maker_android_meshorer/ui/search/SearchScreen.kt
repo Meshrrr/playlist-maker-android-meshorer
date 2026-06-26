@@ -1,5 +1,7 @@
 package com.practicum.playlist_maker_android_meshorer.ui.search
 
+
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -17,12 +19,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -31,33 +27,71 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.focus.onFocusChanged
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.LineHeightStyle
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.practicum.playlist_maker_android_meshorer.R
 import com.practicum.playlist_maker_android_meshorer.data.network.Track
+import com.practicum.playlist_maker_android_meshorer.ui.HistoryRequest
 
 
 @Composable
 fun SearchScreen(
+    modifier: Modifier,
     navigateBack: () -> Unit,
-    viewModel: SearchViewModel = viewModel(factory = SearchViewModel.getViewModelFactory())
+    viewModel: SearchViewModel = viewModel(factory = SearchViewModel.getViewModelFactory()),
+    onClick: (Int?) -> Unit,
+
 ) {
 
     val screenState by viewModel.searchscreenstate.collectAsState()
+    var historyList by remember { mutableStateOf<List<String>>(emptyList()) }
+    var text by remember { mutableStateOf("") }
+    var isFocused by remember { mutableStateOf(false) }
+    val focusRequester = remember { FocusRequester() }
+    val focusManager = LocalFocusManager.current
 
     val context = LocalContext.current
+
+
+    LaunchedEffect(text) {
+        viewModel.updateQuery(text)
+    }
+
+    LaunchedEffect(screenState) {
+        when (screenState) {
+            is SearchState.Success -> {
+                focusManager.clearFocus()
+            }
+            else -> Unit
+        }
+    }
+
+    LaunchedEffect(Unit) {
+        historyList = viewModel.getHistoryList()
+    }
+
+
     Column(modifier = Modifier
         .fillMaxSize()
         .background(Color.White))
@@ -89,18 +123,17 @@ fun SearchScreen(
             }
         )
 
-        var textField by remember { mutableStateOf("") }
 
         OutlinedTextField(
-            value = textField,
-            onValueChange = { textField = it },
-            modifier = Modifier.padding(vertical = 16.dp, horizontal = 16.dp).fillMaxWidth(),
+            value = text,
+            onValueChange = {newText -> text = newText },
+            modifier = Modifier.padding(vertical = 16.dp, horizontal = 16.dp).fillMaxWidth().focusRequester(focusRequester).onFocusChanged {focusState -> isFocused = focusState.isFocused},
             shape = RoundedCornerShape(8.dp),
             singleLine = true,
             leadingIcon = { Icon(imageVector = Icons.Default.Search,
                 contentDescription = "Search",
                 modifier = Modifier.size(16.dp).clickable {
-                    viewModel.search(textField)
+                    viewModel.search(text)
                 })},
             placeholder = {
 
@@ -121,7 +154,8 @@ fun SearchScreen(
             trailingIcon = {
                 Icon(imageVector = Icons.Default.Clear,
                     modifier = Modifier.size(16.dp).clickable {
-                        textField = ""
+                        text = ""
+                        viewModel.clearSearch()
                     },
                     contentDescription = null,
 
@@ -130,10 +164,19 @@ fun SearchScreen(
             }
         )
 
+        if (isFocused && text.isEmpty() && historyList.isNotEmpty()) {
+            HistoryRequest(
+                historyList = historyList,
+                onClick = { word ->
+                    text = word
+                }
+            )
+        }
+
         when(screenState) {
             is SearchState.Initial -> {
                 Box(
-                    modifier = Modifier
+                    modifier = modifier
                         .fillMaxSize()
                         .background(Color.White),
                     contentAlignment = Alignment.Center,
@@ -157,7 +200,7 @@ fun SearchScreen(
                 Box(modifier = Modifier.fillMaxSize().background(Color.White),
                     contentAlignment = Alignment.Center) {
 
-                    val tracks = (screenState as SearchState.Success).list
+                    val tracks = (screenState as SearchState.Success).foundList
 
                     if(tracks.isEmpty()) {
                         Box(modifier = Modifier.fillMaxSize(),
@@ -171,7 +214,8 @@ fun SearchScreen(
 
                             items(tracks.size) {
                                 index ->
-                                    TrackListItem(track = tracks[index])
+                                    TrackListItem(track = tracks[index],
+                                        onClick = {onClick(index)})
                                     Divider(thickness = 0.5.dp, color = Color.LightGray)
 
                             }
@@ -196,13 +240,13 @@ fun SearchScreen(
 @Preview
 @Composable
 private fun SearchPreview() {
-    SearchScreen(navigateBack = {})
+    SearchScreen(navigateBack = {}, modifier = Modifier, onClick = {})
 }
 
 @Composable
-fun TrackListItem(track: Track) {
+fun TrackListItem(track: Track, onClick: () -> Unit) {
 
-    Row(modifier = Modifier.fillMaxWidth(),
+    Row(modifier = Modifier.fillMaxWidth().clickable(onClick = { onClick() }),
         verticalAlignment = Alignment.CenterVertically) {
 
         Image(modifier = Modifier.size(40.dp),
@@ -255,5 +299,5 @@ private fun TimeTrackPreview() {
 @Preview(showSystemUi = true)
 @Composable
 private fun showListTrackPreview() {
-    TrackListItem(Track(trackName = "Love me", artistName = "Drake", trackTime = "2:12"))
+    TrackListItem(Track(id=0, trackName = "Love me", artistName = "Drake", trackTime = "2:12", image="", isFavourite = false, playlistId = 0), onClick = {})
 }
