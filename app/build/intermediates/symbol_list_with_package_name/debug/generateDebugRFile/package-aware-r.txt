@@ -28,6 +28,7 @@ string featured_info
 string mail
 string main_name
 string playlist_info
+string playlist_screen_text
 string search_info
 string searching
 string settings

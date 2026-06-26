@@ -19,8 +19,9 @@ import kotlinx.coroutines.launch
 import okhttp3.Dispatcher
 import okio.IOException
 
-class SearchViewModel(private val tracksRepository: TracksRepositoryImpl): ViewModel() {
+class SearchViewModel(): ViewModel() {
 
+    private val tracksRepository = TracksRepositoryImpl(scope = viewModelScope)
     private val searchHistoryRepository = SearchHistoryRepositoryImpl(scope = viewModelScope)
 
     private val _searchQuery = MutableStateFlow("")
@@ -69,8 +70,8 @@ class SearchViewModel(private val tracksRepository: TracksRepositoryImpl): ViewM
             object : ViewModelProvider.Factory {
                 @Suppress("UNCHECKED_CAST")
                 override fun <T : ViewModel> create(modelClass: Class<T>): T {
-                    return SearchViewModel(TracksRepositoryImpl(RetrofitNetworkClient(Storage())))
-                    as T
+                    val vm = SearchViewModel()
+                    return vm as T
                 }
             }
     }

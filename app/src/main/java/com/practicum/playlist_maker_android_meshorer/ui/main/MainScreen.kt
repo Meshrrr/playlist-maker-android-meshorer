@@ -34,7 +34,8 @@ import com.practicum.playlist_maker_android_meshorer.R
 @Composable
 fun Main_screen(
     navigateToSearch: () -> Unit,
-    navigateToSettings: () -> Unit
+    navigateToSettings: () -> Unit,
+    navigateToPlaylists: () -> Unit
 ) {
     val context = LocalContext.current
     Box(modifier = Modifier.fillMaxSize().background(Color(55, 114, 231)))
@@ -72,7 +73,7 @@ fun Main_screen(
                 ButtonFields(button_description = stringResource(R.string.playlist_info),
                     painter = painterResource(id = R.drawable.playlist_icon))
                 {
-
+                    navigateToPlaylists()
                 }
 
                 ButtonFields(button_description = stringResource(R.string.featured_info),
@@ -126,7 +127,8 @@ private fun ButtonFields(button_description: String, painter: Painter, onClick: 
 @Composable
 private fun MainScreenPreview() {
     Main_screen(navigateToSearch = {},
-        navigateToSettings = {})
+        navigateToSettings = {},
+        navigateToPlaylists = {})
 
 }
 

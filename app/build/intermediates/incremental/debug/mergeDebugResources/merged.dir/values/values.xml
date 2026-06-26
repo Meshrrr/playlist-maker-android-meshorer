@@ -201,6 +201,7 @@
     <string name="navigation_menu">"Navigation menu"</string>
     <string name="not_selected">Not selected</string>
     <string name="playlist_info">Плейлисты</string>
+    <string name="playlist_screen_text">Плейлисты</string>
     <string name="range_end">"Range end"</string>
     <string name="range_start">"Range start"</string>
     <string name="search_info">Поиск</string>

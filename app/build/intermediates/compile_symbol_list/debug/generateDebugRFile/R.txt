@@ -27,6 +27,7 @@ int string featured_info 0x0
 int string mail 0x0
 int string main_name 0x0
 int string playlist_info 0x0
+int string playlist_screen_text 0x0
 int string search_info 0x0
 int string searching 0x0
 int string settings 0x0

@@ -299,5 +299,5 @@ private fun TimeTrackPreview() {
 @Preview(showSystemUi = true)
 @Composable
 private fun showListTrackPreview() {
-    TrackListItem(Track(id=0, trackName = "Love me", artistName = "Drake", trackTime = "2:12", image="", isFavourite = false, playlistId = 0), onClick = {})
+    TrackListItem(Track(id=0, trackName = "Love me", artistName = "Drake", trackTime = "2:12", image="", isFavorite = false, playlistId = 0), onClick = {})
 }

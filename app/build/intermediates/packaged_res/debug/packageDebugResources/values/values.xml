@@ -15,6 +15,7 @@
     <string name="mail">volframhome@gmail.com</string>
     <string name="main_name">Playlist maker</string>
     <string name="playlist_info">Плейлисты</string>
+    <string name="playlist_screen_text">Плейлисты</string>
     <string name="search_info">Поиск</string>
     <string name="searching">Поиск</string>
     <string name="settings">Настройки</string>
