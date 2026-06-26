@@ -76,6 +76,7 @@ int dimen notification_subtext_size 0x7f030013
 int dimen notification_top_pad 0x7f030014
 int dimen notification_top_pad_large_text 0x7f030015
 int drawable abc_vector_test 0x7f040001
+int drawable add_playlist 0x7f040021
 int drawable arrow_back 0x7f040002
 int drawable arrow_button 0x7f040003
 int drawable control_theme 0x7f040004

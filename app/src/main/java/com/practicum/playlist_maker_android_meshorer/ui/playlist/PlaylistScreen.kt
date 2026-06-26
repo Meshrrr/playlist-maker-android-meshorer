@@ -94,6 +94,11 @@ fun PlaylistScreen(modifier: Modifier = Modifier,
                     HorizontalDivider(thickness = 0.5.dp)
                 }
             }
+        }
+        FloatingActionButton(modifier = Modifier.padding(32.dp).align(Alignment.BottomEnd),
+            onClick = { addNewPlayList()}) {
+            Image(painter = painterResource(R.drawable.add_playlist),
+                modifier = Modifier.size(23.dp), contentDescription = null)
 
         }
     }
@@ -121,3 +126,5 @@ fun PlaylistListItem(playlist: Playlist,
     }
 
 }
+
+//доделать экран создания плейлиста, экран трека, проверить поиск

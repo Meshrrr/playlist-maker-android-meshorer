@@ -6,6 +6,7 @@ color purple_700
 color teal_200
 color teal_700
 color white
+drawable add_playlist
 drawable arrow_back
 drawable arrow_button
 drawable control_theme
